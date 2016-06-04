@@ -1,7 +1,47 @@
 # Scroll Depth
 Scroll Depth is a Google Analytics plugin that tracks how far users are scrolling. The plugin provides native support for Universal Analytics, Classic Google Analytics, and Google Tag Manager. It can also be used with any analytics service that supports events.
 
-**[All information is available on the Project Page](http://projects.parsnip.io/scroll-depth/)**
+This fork is maintained in parallel with Robert Flaherty's `jquery-scrolldepth` project, removing the dependence on jQuery.
+
+## Install
+```
+bower install gascrolldepth
+```
+
+## Usage
+```javascript
+gascrolldepth.init();
+```
+
+or with jQuery:
+```javascript
+$.gascrolldepth();
+```
+
+## Browser Compatibility
+
+When specifying elements by their selector, browser compatibility is as follows, due to use of `document.querySelector` to find the element.
+
+| Browser                   | Minimum Verison |
+|:------------------------- |:---------------:|
+| Chrome                    | 4
+| Firefox                   | 3.5
+| Internet Explorer         | 8
+| Opera                     | 10.1
+| Safari                    | 3.1
+| iOS Safari                | 3.2
+| Opera Mini                | 8
+| Blackberry Browser        | 7
+| Opera Mobile              | 12
+| Chrome for Android        | 42
+| Firefox for Android       | 39
+| IE Mobile                 | 10
+| UC Browser for Android    | 9.9
+
+To expand browser compatibility to all effective browsers (IE 6+, Chrome 1+, Safari 1+, Firefox 2+, etc), you can:
+* include jQuery and all selectors supported by jQuery will be supported.
+* or, specify `elements` as an array of element IDs only, eg. `#main` and it will fallback to `document.getElementById`;
+* or, specify `elements` as an array of `DOMElement` objects rather than string selectors.
 
 ## Forks
 * There's a [WordPress plugin](https://wordpress.org/plugins/wp-scroll-depth/) maintained by Lon Koenig.
@@ -13,38 +53,6 @@ Bug reports and code contributions are welcome. Please see [contributing.md](htt
 ## Testing
 There's a test HTML file that mocks the Google Analytics functions and writes the GA Event data to the console.
 
-## Contact
-If you have any questions you can find me on Twitter at [@robflaherty](https://twitter.com/robflaherty). If you need help fixing something, **please provide a URL**.
-
-## Changelog
-
-0.9.1 (4/28/18): Added support for Universal Module Definition (UMD).
-
-0.9 (11/19/15): Removed Baseline event. Added methods to add elements, remove elements, and reset the current scroll tracking state.
-
-0.8 (7/18/15): Added option for custom GA global. Added '__gaTracker' as auto-detected global. Added option for overriding GTM.
-
-0.7.2 (6/8/15): Fixed bug: https://github.com/robflaherty/jquery-scrolldepth/issues/62
-
-0.7 (11/26/14): Added custom callback for sending scroll events to non-GA services
-
-0.6 (7/18/14): https://github.com/robflaherty/jquery-scrolldepth/issues/36
-
-0.5 (3/1/14): Added Pixel Depth option. Added option to turn off UserTiming. Removed test mode option.
-
-0.4.1 (2/13/14): Fixed GTM firing double events
-
-0.4 (12/23/13): Added support for Google Tag Manager
-
-0.3 (11/21/13): Added throttling of scroll event callback for better performance.
-
-0.2 (11/19/13): Added support for Universal Analytics.
-
-0.1.2 (5/29/12): Added GA User Timing events to allow time tracking for scroll points.
-
-0.1.1 (4/12/12): Added `opt_noninteraction` option to GA event to avoid impacting bounce rate.
-
-0.1 (4/7/12): Initial release.
-
 ## License
 Licensed under the MIT and GPL licenses.
+

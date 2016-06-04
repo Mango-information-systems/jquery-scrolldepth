@@ -1,2 +1,2 @@
 #!/bin/bash
-uglifyjs jquery.scrolldepth.js -c -m --comments -o jquery.scrolldepth.min.js
+uglifyjs gascrolldepth.js -c -m --comments -o gascrolldepth.min.js
