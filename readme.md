@@ -43,10 +43,6 @@ To expand browser compatibility to all effective browsers (IE 6+, Chrome 1+, Saf
 * or, specify `elements` as an array of element IDs only, eg. `#main` and it will fallback to `document.getElementById`;
 * or, specify `elements` as an array of `DOMElement` objects rather than string selectors.
 
-## Forks
-* There's a [WordPress plugin](https://wordpress.org/plugins/wp-scroll-depth/) maintained by Lon Koenig.
-* There's a [non-jQuery fork](https://github.com/leighmcculloch/gascrolldepth.js) maintained by @leighmcculloch.
-
 ## Contributing
 Bug reports and code contributions are welcome. Please see [contributing.md](https://github.com/robflaherty/jquery-scrolldepth/blob/master/contributing.md).
 
